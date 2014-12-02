@@ -3,7 +3,7 @@
 	Plugin Name: TT - Subscribe
 	Plugin URI: http://wordpress.org/extend/plugins/tt-subscribe/
 	Description: This plugin is a simplified subscription box that supports unlimited customization. It currently includes facebook, twitter, google plus and feedburner. Wigetized, hooked, full control and total customization, mobile friendly, responsive, new dashboard and many more features!
-	Version: 4.0
+	Version: 4.0.1
 	Author: Thesabel Tuto
 	Author URI: http://thesabeltuto.blogspot.com
 	Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=H228JQZP6269J&lc=PH&item_name=TT%2dPlugins&item_number=tt%2dplugins¤cy_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
@@ -56,5 +56,5 @@ function load_tt_subscribe_scripts() {
 }
 
 function load_tt_subscribe_custom() {
-	require_once(TT_SUBSCRIBE_DIR.'includes/custom-codes.php');
+	require(TT_SUBSCRIBE_DIR.'includes/custom-codes.php');
 }

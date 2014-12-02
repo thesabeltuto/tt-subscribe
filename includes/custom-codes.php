@@ -10,7 +10,7 @@
 	$width_inner = $width;
 	if(isset($width_inner)) $width_inner-=20; else $width_inner=260;
 ?>
-<?php /* Google+ Script */?>
+<?php /* Google+ Script */ ?>
 <script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -35,8 +35,10 @@ div#tt-subscribe{ width: 90%; }
 #tt-subscribe-area-facebook iframe, #tt-subscribe-area-twitter iframe, #tt-subscribe-area-google iframe, #tt-subscribe-area-feedburner iframe { width: 100%!important; }
 }
 
-<?=$css; ?>
+<?php if( $css != '' || $css != null) $css; ?>
 </style>
+<?php if( $script != '' || $script != null) { ?>
 <script>
 <?=$script; ?>
 </script>
+<?php } ?>
