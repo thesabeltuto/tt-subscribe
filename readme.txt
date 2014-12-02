@@ -39,6 +39,8 @@ This plugin is a simplified subscription box that supports unlimited customizati
 
 == Changelog ==
 
+4.0.1 Fix on custom codes output
+
 4. New Dashboard!
 * Includes Basic Settings, Subscriptions, Advance Settings, Support, and About.
 * Supports mobile devices. Dashboard and widget are mobile friendly and responsive.
@@ -53,11 +55,6 @@ This plugin is a simplified subscription box that supports unlimited customizati
 
 == Upgrade notice ==
 
-**NEW!!!** Version 4.0 is Out!!!
-
-**NEW!!!** Dashboard!!!
-**NEW!!!** Mobile Friendly!!!
-**NEW!!!** Responsive!!!
-**NEW!!!** Full Customization!!!
+**NEW!!!** Version 4.0.1 is Out!!!
 
 You can easily overwrite your existing TT-Subscribe plugin with this new one!
