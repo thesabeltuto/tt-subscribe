@@ -26,6 +26,11 @@ Simple, minimal, customizable, responsive and mobile-ready social media subscrip
 * Please refer to Dashboard -> TT-Subscribe > Support for answers.
 
 
+== Screenshots ==
+1. https://ttplugins.files.wordpress.com/2013/03/full.png
+2. https://ttplugins.files.wordpress.com/2013/03/sidebar.png
+3. https://ttplugins.files.wordpress.com/2013/03/home1.png
+
 == Changelog ==
 4.0.2 All New And Updated Social Media Subscriptions!
 * Includes update on dashboard
