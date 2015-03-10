@@ -1,43 +1,37 @@
-﻿=== TT-Subscribe ===
+﻿=== TT - Subscribe ===
 Contributors: Thesabel Tuto
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=H228JQZP6269J&lc=PH&item_name=TT%2dPlugins&item_number=tt%2dplugins¤cy_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tags: tt-plugins, subscribe, facebook, google, twitter, feedburner, social, social media, customizable, custom, responsive, mobile, support, hook, widget
+Tags: tt-plugins, subscribe, facebook, instagram, youtube, google, twitter, feedburner, social, social media, customizable, custom, responsive, mobile, support, hook, widget, shortcode, subscription, subscriber, hook, minimal, simple, mobile-ready, settings, options, functions, scripts,
+Donate link: https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=vF4Lj4sFxXwHhnpoqek4G0QT3sFoxEMaIW7M5Fuxa66TkdzJl_2oGyfzVsO&dispatch=5885d80a13c0db1f8e263663d3faee8de62a88b92df045c56447d40d60b23a7c
 Requires at least: 3.5.1
-Tested up to: 4.0
-Stable tag: 4.0.1
+Tested up to: 4.1.1
+Stable tag: 4.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin is a simplified subscription box that supports unlimited customization. It currently includes facebook, twitter, google plus and feedburner. Wigetized, hooked, full control and total customization, mobile friendly, responsive, new dashboard and many more features!
+Simple, minimal, customizable, responsive and mobile-ready social media subscription box. Includes only the latest and major social media networks according to Forbes namely Facebook, Twitter, Youtube, Instagram, Google+ and Feedburner.
 
 == Description ==
-
-This plugin is a simplified subscription box that supports unlimited customization. It currently includes facebook, twitter, google plus and feedburner. Wigetized, hooked, full control and total customization, mobile friendly, responsive, new dashboard and many more features!
+Simple, minimal, customizable, responsive and mobile-ready social media subscription box. Includes only the latest and major social media networks according to Forbes namely Facebook, Twitter, Youtube, Instagram, Google+ and Feedburner. Widget and shortcode ready. Nothing can go wrong with your social media subscription box with the all new dashboard settings and support. You can change the skin and looks of your subscription box. You can even add additional functionalities and scriptings with this plugin.
 
 == Installation ==
-
 1. Upload `tt-subscribe` folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. **NEW!!!** There are **3 ways** to include TT-Subscribe to your WordPress Site! Here are your Options: 
+2. Activate the plugin through the \'Plugins\' menu in WordPress
+3. Setup widget settings in Dashboard > TT-Subscribe
 
-* Place `<?php do_action('tt_subscribe'); ?>` in your templates
-* **NEW!!!** Add shortcode `[tt_subscribe]` to your Posts or Pages.
-* **NEW!!!** Drag and drop widget called `TT-Subscribe` to your Theme.
-* **NEW!!!** Dashboard, Responsive, Advance Settings, etc. Available!
-
-== Frequently asked questions ==
-
+== Frequently Asked Questions ==
 1. Where can I change the settings?
 * A: You can change the settings in the Dashboard -> TT-Subscribe menu.
 
 2. How to make this plugin work?
 * Please refer to Dashboard -> TT-Subscribe > Support for answers.
 
-== Screenshots ==
-
-
 
 == Changelog ==
+4.0.2 All New And Updated Social Media Subscriptions!
+* Includes update on dashboard
+* Removed ugly icon images
+* Includes FontAwesome framework for all new and customizable social media icons
+* Fixes on options and scriptings
 
 4.0.1 Fix on custom codes output
 
@@ -53,8 +47,6 @@ This plugin is a simplified subscription box that supports unlimited customizati
 1. A Shortcode has been added to this plugin.
 * To add the shortcode to your Posts / Pages, please include the code `[tt_subscribe]`
 
-== Upgrade notice ==
 
-**NEW!!!** Version 4.0.1 is Out!!!
-
-You can easily overwrite your existing TT-Subscribe plugin with this new one!
+== Upgrade Notice ==
+**Version 4.0.2 is Out!** All New And Updated Social Media Subscriptions is finally here! Now includes Facebook, Twitter, Youtube, Instagram, Google+ and Feedburner. Full customization on social media icons are available. Upgraded dashboard for better usage. Upgrade to 4.0.2 now!
