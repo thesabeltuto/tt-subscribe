@@ -72,6 +72,7 @@ function tt_subscribe_basic_page() {
                     <p>(ex. 280, original width settings)</p>
                 </div>
                 
+                <h3>Icons</h3>
                 <div>
                     <label for="tt-subscribe-font-color">Icon Color</label>
                     <input name="tt-subscribe-font-color" type="text" value="<?php echo get_option('tt-subscribe-font-color'); ?>" />
