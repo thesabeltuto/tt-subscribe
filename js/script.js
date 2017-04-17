@@ -4,8 +4,8 @@ jQuery(document).ready(function() {
 	
 	//hide all
 	jQuery('div.tt-susbscribe-iconselect').each(function(index, obj) {
-		jQuery(this).removeClass('tt-susbscribe-active');
-		jQuery(this).children().last().removeClass('tt-susbscribe-current');
+		jQuery(this).show();
+		jQuery(this).children().last().hide();
 	});
 	jQuery('div.tt-susbscribe-areaselect').each(function(index, obj) {
 		jQuery(this).hide();
@@ -19,78 +19,68 @@ jQuery(document).ready(function() {
 		//icons 
 		jQuery(this).children().children().next().children().first().addClass('tt-susbscribe-active');
 		jQuery('div.tt-susbscribe-active').each(function(index, obj) {
-			jQuery(this).children().removeClass('tt-susbscribe-show');
-			jQuery(this).children().addClass('tt-susbscribe-hide');
-			jQuery(this).children().last().removeClass('tt-susbscribe-hide');
-			jQuery(this).children().last().addClass('tt-susbscribe-current');
+			jQuery(this).children().hide();
+			jQuery(this).children().last().show();
 		});
 	});
 	
 	//on clicking icons
-	jQuery('div.tt-susbscribe-iconselect').click(function(index, obj){
-		var clicked = jQuery(this).attr('id');
-		var prefix = clicked.substr(0,13);
-		var suffix = clicked.substr(12);
+	jQuery('div.tt-susbscribe-iconselect').each(function(index,obj) {
+		jQuery(this).click(function(index, obj){
+			var clicked = jQuery(this).attr('id');
+			var prefix = clicked.substr(0,13);
+			var suffix = clicked.substr(12);
 			
 			//hide all
-			jQuery('div.tt-susbscribe-iconselect').each(function(index, obj) {
-				jQuery(this).removeClass('tt-susbscribe-active');
-				jQuery(this).children().removeClass('tt-susbscribe-show');
-				jQuery(this).children().removeClass('tt-susbscribe-hide');
-				jQuery(this).children().removeClass('tt-susbscribe-current');
-				jQuery(this).children().first().addClass('tt-susbscribe-show');
-				jQuery(this).children().last().addClass('tt-susbscribe-hide');
-			});
-			jQuery('div.tt-susbscribe-areaselect').each(function(index, obj) {
-				jQuery(this).hide();
+			jQuery(this).parent('div').children('div').each(function(index,obj) {
+				jQuery(this).removeClass('tt-susbscribe-active');	
+				jQuery(this).children('div').first().show();
+				jQuery(this).children('div').last().hide();
 			});
 			
-			//force google+ iframe
-			if(clicked=="tt-subscribe-google")
-				jQuery('div#'+prefix+'area'+suffix+' div').show();
-			
-			//show clicked
-			jQuery('div#'+prefix+'area'+suffix).show();
-			jQuery('div#'+clicked).addClass('tt-susbscribe-active');
-			
-			jQuery('.tt-susbscribe-active').each(function(index,obj) {
-				jQuery(this).children().removeClass('tt-susbscribe-show');
-				jQuery(this).children().removeClass('tt-susbscribe-hide');
-				jQuery(this).children().first().addClass('tt-susbscribe-hide');
-				jQuery(this).children().last().addClass('tt-susbscribe-show');
-				jQuery(this).children().last().addClass('tt-susbscribe-current');
+			//area
+			jQuery(this).parent('div').parent('div').next('div').children('div').each(function() {
+				if( jQuery(this).attr('id') == prefix+'area'+suffix ) {
+					jQuery(this).show();
+					//force google+ iframe
+					if(clicked=="tt-subscribe-google")
+						jQuery('div#'+prefix+'area'+suffix+' div').show();				
+				} else { 
+					jQuery(this).hide();
+				}
+			});
+							
+			//icons
+			jQuery(this).each(function(){
+				if( jQuery(this).attr('id') == clicked ) {	
+					jQuery(this).addClass('tt-susbscribe-active');
+				}
 			});
 						
 //			console.log('clicked: '+clicked);
 //			console.log('prefix: '+prefix);
 //			console.log('suffix: '+suffix);
+			
+		});
 	});
 		
 	jQuery('div.tt-susbscribe-iconselect').mouseover(function(index, obj){
- 		if(jQuery(this).children().last().hasClass('tt-susbscribe-current')){
-			jQuery(this).children().removeClass('tt-susbscribe-hide');
-			jQuery(this).children().removeClass('tt-susbscribe-show');
-			jQuery(this).children().first().addClass('tt-susbscribe-hide');
-			jQuery(this).children().last().addClass('tt-susbscribe-show');
-		} else {
-			jQuery(this).children().removeClass('tt-susbscribe-hide');
-			jQuery(this).children().removeClass('tt-susbscribe-show');
-			jQuery(this).children().first().addClass('tt-susbscribe-hide');
-			jQuery(this).children().last().addClass('tt-susbscribe-show');
-		}
+			if(jQuery(this).hasClass('tt-susbscribe-active')){
+				jQuery(this).children().first().hide();
+				jQuery(this).children().last().show();
+			} else {
+				jQuery(this).children().first().hide();
+				jQuery(this).children().last().show();
+			}
    });
 	
 	jQuery('div.tt-susbscribe-iconselect').mouseout(function(index, obj){
-		if(jQuery(this).children().last().hasClass('tt-susbscribe-current')){
-			jQuery(this).children().removeClass('tt-susbscribe-hide');
-			jQuery(this).children().removeClass('tt-susbscribe-show');
-			jQuery(this).children().first().addClass('tt-susbscribe-hide');
-			jQuery(this).children().last().addClass('tt-susbscribe-show');
-		} else {
-			jQuery(this).children().removeClass('tt-susbscribe-hide');
-			jQuery(this).children().removeClass('tt-susbscribe-show');
-			jQuery(this).children().first().addClass('tt-susbscribe-show');
-			jQuery(this).children().last().addClass('tt-susbscribe-hide');
-		}
+			if(jQuery(this).hasClass('tt-susbscribe-active')){
+				jQuery(this).children().first().hide();
+				jQuery(this).children().last().show();
+			} else {
+				jQuery(this).children().first().show();
+				jQuery(this).children().last().hide();
+			}
 	});
 });

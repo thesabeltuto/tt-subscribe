@@ -2,8 +2,7 @@
 
 /*Global*/
 #tt-subscribe a { text-decoration: none!important; border: none!important; }
-.tt-susbscribe-hide { display: none!important; }
-.tt-susbscribe-show, .tt-susbscribe-current {display:block!important;}
+.tt-susbscribe-current {display:block;}
 
 /*Main Container*/
 div#tt-subscribe { width: 280px; height: auto; margin: 0px auto; padding: 0 0 10px 10px; }

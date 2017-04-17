@@ -3,17 +3,11 @@
 function tt_subscribe_about_page() {
 ?>
     <div class="tt-subscribe-admin">
-        <h1>TT Subscribe</h1>
+        <h1>TT Subscribe <span>Version <?=$GLOBALS['TT_SUBSCRIBE_VERSION'];?></span></h1>
         
         <div id="tt-subscribe-admin-nav">
             <ul>
-                <li id="ts0"><a href="?page=tt-subscribe">Home</a></li>
-                <li id="ts1"><a href="?page=tt-subscribe-basic">Basic Settings</a></li>
-                <li id="ts2"><a href="?page=tt-subscribe-subscriptions">Subscriptions</a></li>
-                <li id="ts3"><a href="?page=tt-subscribe-advance">Advance Settings</a></li>
-                <li id="ts4"><a href="?page=tt-subscribe-support">Support</a></li>
-                <li id="ts5" class="active"><a href="?page=tt-subscribe-about">About</a></li>
-                <li id="donate"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=H228JQZP6269J&lc=US&item_name=TT%2dPlugins%3a%20Support%20WordPress%20Plugin%20Development&item_number=TT%2dPlugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">Donate</a></li>
+                <?php TT_SUBSCRIBE_navigation(); ?>
             </ul>
         </div>
 		<div class="tt-subscribe-admin-content" id="ts-5">
@@ -28,9 +22,15 @@ function tt_subscribe_about_page() {
                 </p>
             </div>
             
+            <h3>Plugin Version</h3>
+            <div class="tt-subscribe-admin-section tt-subscribe-admin-about">
+                <p>Version: <?=$GLOBALS['TT_SUBSCRIBE_VERSION'];?></p>
+            </div>
+            
 			<h3>Specials</h3>
             <div class="tt-subscribe-admin-section tt-subscribe-admin-about">
-                <p>Includes Font Awesome for customizable social media icons. Thank you <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a>.</p>
+                <p>Includes Font Awesome for customizable social media icons. Thank you <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a>.
+                Version: <?=$GLOBALS['TT_SUBSCRIBE_FONTAWESOME_VERSION'];?>.</p>
             </div>
             
             <h3>Rate Plugin</h3>
@@ -62,11 +62,7 @@ function tt_subscribe_about_page() {
             </div>
             
 		</div>
-        <div class="tt-subscribe-admin-footer">
-        	Plugin created by <a href="http://thesabeltuto.blogspot.com" target="_blank">Thesabel Tuto</a> | 
-            Plugin site at <a href="http://ttplugins.wordpress.com/" target="_blank">TT Plugins</a> | 
-            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=H228JQZP6269J&lc=US&item_name=TT%2dPlugins%3a%20Support%20WordPress%20Plugin%20Development&item_number=TT%2dPlugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">DONATE!</a>
-        </div>
+        <?php TT_SUBSCRIBE_footer(); ?>
 	</div>
 <?php
 } // function tt_subscribe_about_page() ---- END

@@ -4,18 +4,12 @@ function tt_subscribe_subscriptions_page() {
 	tt_subscribe_selection();
 ?>
     <div class="tt-subscribe-admin">
-        <h1>TT Subscribe</h1>
+        <h1>TT Subscribe <span>Version <?=$GLOBALS['TT_SUBSCRIBE_VERSION'];?></span></h1>
         
         <div id="tt-subscribe-admin-nav">
             <ul>
-                <li id="ts0"><a href="?page=tt-subscribe">Home</a></li>
-                <li id="ts1"><a href="?page=tt-subscribe-basic">Basic Settings</a></li>
-                <li id="ts2" class="active"><a href="?page=tt-subscribe-subscriptions">Subscriptions</a></li>
-                <li id="ts3"><a href="?page=tt-subscribe-advance">Advance Settings</a></li>
-                <li id="ts4"><a href="?page=tt-subscribe-support">Support</a></li>
-                <li id="ts5"><a href="?page=tt-subscribe-about">About</a></li>
-                <li id="donate"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=H228JQZP6269J&lc=US&item_name=TT%2dPlugins%3a%20Support%20WordPress%20Plugin%20Development&item_number=TT%2dPlugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">Donate</a></li>
-            </ul>
+                <?php TT_SUBSCRIBE_navigation(); ?>
+        	</ul>
         </div>
 
         <form method="post" action="options.php">
@@ -140,11 +134,7 @@ function tt_subscribe_subscriptions_page() {
             </div>
             <?php submit_button(); ?>
 		</div>
-        <div class="tt-subscribe-admin-footer">
-        	Plugin created by <a href="http://thesabeltuto.blogspot.com" target="_blank">Thesabel Tuto</a> | 
-            Plugin site at <a href="http://ttplugins.wordpress.com/" target="_blank">TT Plugins</a> | 
-            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=H228JQZP6269J&lc=US&item_name=TT%2dPlugins%3a%20Support%20WordPress%20Plugin%20Development&item_number=TT%2dPlugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">DONATE!</a>
-        </div>
+        <?php TT_SUBSCRIBE_footer(); ?>
         </form>
     </div>
 <?php

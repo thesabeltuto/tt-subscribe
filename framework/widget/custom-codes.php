@@ -10,9 +10,14 @@
 	$fontactive = get_option( 'tt-subscribe-font-active' );
 	
 	$width_outer = $width;
-	if(!empty($width_outer)) $width_outer; else $width_outer=280;
+	if(!empty($width_outer)) $width_outer; else $width_outer="280px";
 	$width_inner = $width;
-	if(!empty($width_inner)) $width_inner-=20; else $width_inner=260;
+	if(!empty($width_inner)) {
+		preg_match_all('!\d+!', $width_inner, $width_inner_val);
+		$width_inner_val[0][0] -= 20;
+		$width_inner = $width_inner_val[0][0]."px";
+		//$width_inner_val;
+	} else $width_inner="260px";
 ?>
 <?php /* Google+ Script */ ?>
 <script type="text/javascript">
@@ -26,17 +31,17 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                    
 <?php /* Widget Style */?>
 <style>
-div#tt-subscribe, #tt-subscribe-icons { width: <?=$width_outer; ?>px; }
+div#tt-subscribe, #tt-subscribe-icons { width: <?=$width_outer; ?>; }
 #tt-subscribe-header { background: #<?=$background; ?>!important; color: #<?=$color; ?>; }
 #tt-subscribe h1 { color: #<?=$color; ?>!important; }
-.tt-susbscribe-areaselect { width: <?=$width_inner; ?>px; }
+.tt-susbscribe-areaselect { width: <?=$width_inner; ?>; }
 #tt-subscribe-area { border-bottom: 1px solid #<?=$background; ?>; }
 .tt-susbscribe-iconselect { color: #<?=$fontcolor; ?>; }
 .tt-susbscribe-iconselect:hover { color: #<?=$fonthover; ?>; }
 .tt-susbscribe-active { color: #<?=$fontactive; ?>; }
 .tt-susbscribe-active:hover {  color: #<?=$fonthover; ?>;}
 /** RESPONSIVE AREA **/
-@media (max-width: <?=$width; ?>px) {	
+@media (max-width: <?=$width; ?>) {	
 div#tt-subscribe{ width: 90%; }
 #tt-subscribe-icons, #tt-subscribe-area-facebook a, #tt-subscribe-area-twitter a, #tt-subscribe-area-google a, #tt-subscribe-area-feedburner a { width: 100%; } 
 #tt-subscribe-area-facebook, #tt-subscribe-area-twitter, #tt-subscribe-area-google, #tt-subscribe-area-feedburner { width: 95%; }

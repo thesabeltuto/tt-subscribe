@@ -33,17 +33,11 @@ function tt_subscribe_html_page() {
 	 if ( get_option('tt-subscribe-youtube-txt') == '' ) $youtubetxt='currently <span class="empty">empty</span>'; else $youtubetxt=get_option('tt-subscribe-youtube-txt');
 ?>
     <div class="tt-subscribe-admin">
-        <h1>TT Subscribe</h1>
+        <h1>TT Subscribe <span>Version <?=$GLOBALS['TT_SUBSCRIBE_VERSION'];?></span></h1>
         
         <div id="tt-subscribe-admin-nav">
             <ul>
-                <li id="ts0" class="active"><a href="?page=tt-subscribe">Home</a></li>
-                <li id="ts1"><a href="?page=tt-subscribe-basic">Basic Settings</a></li>
-                <li id="ts2"><a href="?page=tt-subscribe-subscriptions">Subscriptions</a></li>
-                <li id="ts3"><a href="?page=tt-subscribe-advance">Advance Settings</a></li>
-                <li id="ts4"><a href="?page=tt-subscribe-support">Support</a></li>
-                <li id="ts5"><a href="?page=tt-subscribe-about">About</a></li>
-                <li id="donate"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=H228JQZP6269J&lc=US&item_name=TT%2dPlugins%3a%20Support%20WordPress%20Plugin%20Development&item_number=TT%2dPlugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">Donate</a></li>
+            	<?php TT_SUBSCRIBE_navigation(); ?>    
             </ul>
         </div>
         
@@ -54,14 +48,8 @@ function tt_subscribe_html_page() {
             <div class="tt-subscribe-admin-section tt-subscribe-admin-home">
                 <h3>Please select the following to proceed:</h3>
                 <ol>
-                    <li><a href="?page=tt-subscribe">Home</a></li>
-                    <li><a href="?page=tt-subscribe-basic">Basic Settings</a></li>
-                    <li><a href="?page=tt-subscribe-subscriptions">Subscriptions</a></li>
-                    <li><a href="?page=tt-subscribe-advance">Advance Settings</a></li>
-                    <li><a href="?page=tt-subscribe-support">Support</a></li>
-                    <li><a href="?page=tt-subscribe-about">About</a></li>
-                    <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=H228JQZP6269J&lc=US&item_name=TT%2dPlugins%3a%20Support%20WordPress%20Plugin%20Development&item_number=TT%2dPlugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">Donate</a></li>
-               </ol>
+                	<?php TT_SUBSCRIBE_home_navigation(); ?>
+                </ol>
             </div>
             
             <div class="tt-subscribe-admin-section tt-subscribe-admin-home">
@@ -189,7 +177,7 @@ function tt_subscribe_html_page() {
 
             <div class="tt-subscribe-admin-section tt-subscribe-admin-home">
                 <h3>About</h3>
-				<p>All detailed information about the plugin and the author is in the about section. Click <a href="?page=tt-subscribe-about">here</a> to navigate to about section now. Click <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=H228JQZP6269J&lc=US&item_name=TT%2dPlugins%3a%20Support%20WordPress%20Plugin%20Development&item_number=TT%2dPlugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">here</a> to donate to the author now.</p>
+				<p>All detailed information about the plugin and the author is in the about section. Click <a href="?page=tt-subscribe-about">here</a> to navigate to about section now. Click <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=H228JQZP6269J&lc=US&item_name=TT%2dPlugins%3a%20Support%20WordPress%20Plugin%20Development&item_number=TT%2dPlugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">here</a> to donate to the author now. Version <?=$GLOBALS['TT_SUBSCRIBE_VERSION'];?></p>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_s-xclick">
                 <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
@@ -200,11 +188,7 @@ function tt_subscribe_html_page() {
                 <br />
             </div>
 		</div>
-        <div class="tt-subscribe-admin-footer">
-        	Plugin created by <a href="http://thesabeltuto.blogspot.com" target="_blank">Thesabel Tuto</a> | 
-            Plugin site at <a href="http://ttplugins.wordpress.com/" target="_blank">TT Plugins</a> | 
-            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=H228JQZP6269J&lc=US&item_name=TT%2dPlugins%3a%20Support%20WordPress%20Plugin%20Development&item_number=TT%2dPlugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">DONATE!</a>
-        </div>
+        <?php TT_SUBSCRIBE_footer(); ?>
     </div>
 <?php
 } // function tt_subscribe_html_page() ---- END
