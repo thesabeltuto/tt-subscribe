@@ -1,6 +1,8 @@
 /*	admin.css */
 
 .tt-subscribe-admin h1 { background: #2ea2cc; padding: 15px; margin: 10px 0; color: #fff; text-shadow: 1px 1px 1px #1D4E61; border-bottom: 8px solid #1E8DBB; }
+.tt-subscribe-admin h1 span { font-size: medium; text-align: right; float: right; }
+
 
 .tt-subscribe-admin h2 { padding: 15px 0 0 0; margin: 20px 0 0 0; color: #111; text-shadow: 1px 1px 1px #1D4E61; }
 

@@ -3,8 +3,8 @@ Contributors: Thesabel Tuto
 Tags: tt-plugins, subscribe, facebook, instagram, youtube, google, twitter, feedburner, social, social media, customizable, custom, responsive, mobile, support, hook, widget, shortcode, subscription, subscriber, hook, minimal, simple, mobile-ready, settings, options, functions, scripts,
 Donate link: https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=vF4Lj4sFxXwHhnpoqek4G0QT3sFoxEMaIW7M5Fuxa66TkdzJl_2oGyfzVsO&dispatch=5885d80a13c0db1f8e263663d3faee8de62a88b92df045c56447d40d60b23a7c
 Requires at least: 3.5.1
-Tested up to: 4.1.1
-Stable tag: 4.0.2
+Tested up to: 4.9.7
+Stable tag: 4.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,11 +27,17 @@ Simple, minimal, customizable, responsive and mobile-ready social media subscrip
 
 
 == Screenshots ==
-1. https://ttplugins.files.wordpress.com/2013/03/full.png
-2. https://ttplugins.files.wordpress.com/2013/03/sidebar.png
-3. https://ttplugins.files.wordpress.com/2013/03/home1.png
+1. TT-Subscribe Dashboard
+2. TT-Subscribe Basic Settings
+3. TT-Subscribe Subscriptions
+4. TT-Subscribe Advance Settings
+
 
 == Changelog ==
+4.0.5 All New And Updated Social Media Subscriptions!
+* Fixes on scriptings
+* Fixes on stylings
+
 4.0.2 All New And Updated Social Media Subscriptions!
 * Includes update on dashboard
 * Removed ugly icon images
@@ -54,4 +60,4 @@ Simple, minimal, customizable, responsive and mobile-ready social media subscrip
 
 
 == Upgrade Notice ==
-**Version 4.0.2 is Out!** All New And Updated Social Media Subscriptions is finally here! Now includes Facebook, Twitter, Youtube, Instagram, Google+ and Feedburner. Full customization on social media icons are available. Upgraded dashboard for better usage. Upgrade to 4.0.2 now!
+**Version 4.0.5 is Out!** All New And Updated Social Media Subscriptions is finally here!

@@ -3,14 +3,14 @@
 	Plugin Name: TT - Subscribe
 	Plugin URI: http://wordpress.org/extend/plugins/tt-subscribe/
 	Description: Simple, minimal, customizable, responsive and mobile-ready social media subscription box. Includes only the latest and major social media networks according to Forbes namely Facebook, Twitter, Youtube, Instagram, Google+ and Feedburner. Widget and shortcode ready. Nothing can go wrong with your social media subscription box with the all new dashboard settings and support. You can change the skin and looks of your subscription box. You can even add additional functionalities and scriptings with this plugin.
-	Version: 4.0.2
+	Version: 4.0.5
 	Author: Thesabel Tuto
 	Author URI: http://thesabeltuto.blogspot.com
 	Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=H228JQZP6269J&lc=US&item_name=TT%2dPlugins%3a%20Support%20WordPress%20Plugin%20Development&item_number=TT%2dPlugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 	License: GPLv2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-	Copyright 2015  THESABEL UY TUTO, CSNA, MBA  (email : thesabeltuto@gmail.com)
+	Copyright	THESABEL UY TUTO, CSNA, MBA  (email : ttutowork@gmail.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -31,6 +31,14 @@ define('TT_SUBSCRIBE_FILE', __FILE__ );
 define('TT_SUBSCRIBE_DIR', plugin_dir_path(__FILE__));
 define('TT_SUBSCRIBE_URL', plugin_dir_url(__FILE__));
 
+// Global variables
+$TT_SUBSCRIBE_VERSION = '4.0.5';
+$TT_SUBSCRIBE_CSS_VERSION = '4.0.5'; // style
+$TT_SUBSCRIBE_JS_VERSION = '4.0.5'; // script
+$TT_SUBSCRIBE_ADMIN_CSS_VERSION = '4.0.5'; // admin style
+$TT_SUBSCRIBE_ADMIN_JS_VERSION = '4.0.5'; // admin script
+$TT_SUBSCRIBE_FONTAWESOME_CSS_VERSION = '4.3.0'; // fontawesome style
+
 // Include all files
 require_once(TT_SUBSCRIBE_DIR.'framework/widget.php');
 
@@ -43,10 +51,14 @@ if ( is_admin() ) {
 }
 
 function load_tt_subscribe_scripts() {
+	wp_register_script('tt_subscribe_script.js', TT_SUBSCRIBE_URL.'js/script.js', '', $GLOBALS['TT_SUBSCRIBE_JS_VERSION'], false);	
+	wp_register_style('tt_subscribe_style.css',  TT_SUBSCRIBE_URL.'css/style.css', '', $GLOBALS['TT_SUBSCRIBE_CSS_VERSION'], '');
+	wp_register_style('tt_subscribe_includes_font_awesome.css',   TT_SUBSCRIBE_URL.'includes/font-awesome-4.3.0/css/font-awesome.min.css', '', $GLOBALS['TT_SUBSCRIBE_ADMIN_CSS_VERSION'], '');
+
 	wp_enqueue_script('jquery');
-    wp_enqueue_script('tt_subscribe_script.js', TT_SUBSCRIBE_URL.'js/script.js');
-    wp_enqueue_style('tt_subscribe_style.css', TT_SUBSCRIBE_URL.'css/style.css');	
-    wp_enqueue_style('tt_subscribe_includes_font_awesome.css', TT_SUBSCRIBE_URL.'includes/font-awesome-4.3.0/css/font-awesome.min.css');
+    wp_enqueue_script('tt_subscribe_script.js');
+	wp_enqueue_style('tt_subscribe_style.css');
+	wp_enqueue_style('tt_subscribe_includes_font_awesome.css');
 }
 
 function load_tt_subscribe_custom() {

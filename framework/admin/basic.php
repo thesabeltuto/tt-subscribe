@@ -4,7 +4,7 @@ function tt_subscribe_basic_page() {
 	tt_subscribe_selection();
 ?>
     <div class="tt-subscribe-admin">
-        <h1>TT Subscribe</h1>
+        <h1>TT Subscribe <span>Version <?=$GLOBALS['TT_SUBSCRIBE_VERSION']?></span></h1>
         
         <div id="tt-subscribe-admin-nav">
             <ul>
@@ -72,6 +72,12 @@ function tt_subscribe_basic_page() {
                     <p>(ex. 280, original width settings)</p>
                 </div>
                 
+                <div>
+	                <label for="tt-subscribe-height">Height</label>
+                      <input name="tt-subscribe-height" type="text" value="<?php echo get_option('tt-subscribe-height'); ?>" />
+                    <p>(ex. 80, original height settings)</p>
+                </div>
+				
                 <h3>Icons</h3>
                 <div>
                     <label for="tt-subscribe-font-color">Icon Color</label>

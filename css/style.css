@@ -31,7 +31,7 @@ div#tt-subscribe h1 #h1up { font-size: 16px; font-weight: normal; }
 /*Area*/
 #tt-subscribe-area { background: none; color: #333; border-bottom: 1px solid #2EA2CC;}
 .tt-susbscribe-areaselect { margin: 5px; width: 260px;
-	height: 80px; text-align:center; }
+	height: auto; text-align:center; }
 .tt-susbscribe-areaselect iframe { margin:0!important; padding:0!important; }
 .tt-susbscribe-areaselect a { font-size: 12px; padding: 0; margin: 0 auto; display: block;
 	border-bottom: none;  }

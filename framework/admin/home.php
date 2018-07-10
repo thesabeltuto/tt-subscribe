@@ -33,7 +33,7 @@ function tt_subscribe_html_page() {
 	 if ( get_option('tt-subscribe-youtube-txt') == '' ) $youtubetxt='currently <span class="empty">empty</span>'; else $youtubetxt=get_option('tt-subscribe-youtube-txt');
 ?>
     <div class="tt-subscribe-admin">
-        <h1>TT Subscribe</h1>
+        <h1>TT Subscribe <span>Version <?=$GLOBALS['TT_SUBSCRIBE_VERSION']?></span></h1>
         
         <div id="tt-subscribe-admin-nav">
             <ul>

@@ -3,7 +3,7 @@
 function tt_subscribe_advance_page() {
 ?>
     <div class="tt-subscribe-admin">
-        <h1>TT Subscribe</h1>
+        <h1>TT Subscribe <span>Version <?=$GLOBALS['TT_SUBSCRIBE_VERSION']?></span></h1>
         
         <div id="tt-subscribe-admin-nav">
             <ul>

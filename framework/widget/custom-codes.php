@@ -2,6 +2,7 @@
 	$background = get_option( 'tt-subscribe-background' );
 	$color = get_option( 'tt-subscribe-color' );
 	$width = get_option( 'tt-subscribe-width' );
+	$height = get_option( 'tt-subscribe-height' );
 	$css = get_option( 'tt-subscribe-css' );
 	$script = get_option( 'tt-subscribe-script' );
 	$fonticons = get_option( 'tt-subscribe-select-font-icons');
@@ -13,7 +14,18 @@
 	if(!empty($width_outer)) $width_outer; else $width_outer=280;
 	$width_inner = $width;
 	if(!empty($width_inner)) $width_inner-=20; else $width_inner=260;
+	
+	if(!empty($height)) $height; else $height=80;
 ?>
+<?php /* Facebook Script */ ?>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <?php /* Google+ Script */ ?>
 <script type="text/javascript">
   (function() {

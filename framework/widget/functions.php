@@ -24,12 +24,17 @@ function tt_subscribe() {
 	$youtube_icon = get_option( 'tt-subscribe-select-youtube');
 	$youtube_url = get_option( 'tt-subscribe-youtube-url' );
 	$youtube_txt = get_option( 'tt-subscribe-youtube-txt' );
+
+	$width = get_option( 'tt-subscribe-width' );
+	$height = get_option( 'tt-subscribe-height' );
 	
 	$width_outer = $width;
 	if(!empty($width_outer)) $width_outer; else $width_outer=280;
 	$width_inner = $width;
 	if(!empty($width_inner)) $width_inner-=20; else $width_inner=260;
 	
+	if(!empty($height)) $height; else $height=70;
+
 	if(empty($text)) $text = 'grab the latest issue now';
 	if(empty($prefix)) $prefix = 'follow';
 	if( $selectname !=false) $name; else $name = get_bloginfo( 'name' );
@@ -88,8 +93,10 @@ function tt_subscribe() {
         <div id="tt-subscribe-area">
         	<?php if( $facebook_icon != false) { ?>
                 <div id="tt-subscribe-area-facebook" class="tt-susbscribe-areaselect">
-                    <iframe src="//www.facebook.com/plugins/follow.php?href=<?=$facebook_urlencode; ?>&amp;width=<?=$width_inner; ?>&amp;height=65&amp;colorscheme=light&amp;layout=standard&amp;show_faces=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:<?=$width_inner; ?>px; height:65px;" allowTransparency="true"></iframe>
-	                <a href="<?=$facebook_url; ?>" alt="<?=$facebook_text; ?>" target="_blank"><?=$facebook_txt; ?></a>
+                    <?php /* <iframe src="//www.facebook.com/plugins/follow.php?href=<?=$facebook_urlencode; ?>&amp;width=<?=$width_inner; ?>&amp;height=65&amp;colorscheme=light&amp;layout=standard&amp;show_faces=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:<?=$width_inner; ?>px; height:65px;" allowTransparency="true"></iframe>
+	                <a href="<?=$facebook_url; ?>" alt="<?=$facebook_text; ?>" target="_blank"><?=$facebook_txt; ?></a> */ ?>
+					<div class="fb-page" data-href="<?=$facebook_url; ?>" data-tabs="timeline" data-width="<?=$width_inner; ?>" data-height="<?=$height; ?>" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+					<a href="<?=$facebook_url; ?>" alt="<?=$facebook_text; ?>" target="_blank"><?=$facebook_txt; ?></a>
                 </div>
             <?php 
 			} 

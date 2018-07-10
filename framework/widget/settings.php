@@ -13,7 +13,7 @@ class tt_subscribe_widget extends WP_Widget {
 			array( 'description' => __( 'Add TT-Subscribe to your site.', 'text_domain' ), ) );
 	}
 
-	public function widget($args) {
+	public function widget($args, $instance) {
 		// outputs the content of the widget
 		  extract($args);
 		  echo $before_widget;
@@ -21,7 +21,7 @@ class tt_subscribe_widget extends WP_Widget {
 		  echo $after_widget;
 	}
 	
-	public function form() {
+	public function form($instance) {
 		// outputs the options form on admin
 		?>
 		<p><?php _e( 'Click <a href="admin.php?page=tt-subscribe">here</a> to edit the settings.' ); ?></p>

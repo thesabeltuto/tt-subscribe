@@ -4,7 +4,7 @@ function tt_subscribe_subscriptions_page() {
 	tt_subscribe_selection();
 ?>
     <div class="tt-subscribe-admin">
-        <h1>TT Subscribe</h1>
+        <h1>TT Subscribe <span>Version <?=$GLOBALS['TT_SUBSCRIBE_VERSION']?></span></h1>
         
         <div id="tt-subscribe-admin-nav">
             <ul>
@@ -48,7 +48,7 @@ function tt_subscribe_subscriptions_page() {
                 <div>
                 <label for="tt-subscribe-facebook-url">Facebook URL</label>
                 <input name="tt-subscribe-facebook-url" type="text" id="tt-subscribe-facebook-url" value="<?php echo get_option('tt-subscribe-facebook-url'); ?>" />
-                <p>(ex. https://www.facebook.com/thesabeltuto)</p>
+                <p>(ex. https://www.facebook.com/itsmorefuninthePhilippines)</p>
                 </div>
 
                 <div>

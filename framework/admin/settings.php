@@ -22,9 +22,12 @@ function tt_subscribe_admin_menu() {
 
 // tt_subscribe scripts
 function tt_subscribe_admin_scripts() {
+	wp_register_script('tt_subscribe_admin.js', TT_SUBSCRIBE_URL.'js/admin.js', '', $GLOBALS['TT_SUBSCRIBE_ADMIN_JS_VERSION'], false);	
+	wp_register_style('tt_subscribe_admin.css',  TT_SUBSCRIBE_URL.'css/admin.css', '', $GLOBALS['TT_SUBSCRIBE_ADMIN_CSS_VERSION'], '');
+
 	wp_enqueue_script('jquery');
-    wp_enqueue_script('tt_subscribe_admin.js', TT_SUBSCRIBE_URL.'js/admin.js');
-    wp_enqueue_style('tt_subscribe_admin.css', TT_SUBSCRIBE_URL.'css/admin.css');
+    wp_enqueue_script('tt_subscribe_admin.js');
+    wp_enqueue_style('tt_subscribe_admin.css');
 }
 
 // tt_subscribe data
@@ -34,6 +37,7 @@ function tt_subscribe_data_init() {
 	register_setting( 'tt_subscribe_data_basic', 'tt-subscribe-background' );
 	register_setting( 'tt_subscribe_data_basic', 'tt-subscribe-color' );
 	register_setting( 'tt_subscribe_data_basic', 'tt-subscribe-width' );
+	register_setting( 'tt_subscribe_data_basic', 'tt-subscribe-height' );
 	register_setting( 'tt_subscribe_data_subscription', 'tt-subscribe-select-facebook');
 	register_setting( 'tt_subscribe_data_subscription', 'tt-subscribe-select-twitter');
 	register_setting( 'tt_subscribe_data_subscription', 'tt-subscribe-select-google');
